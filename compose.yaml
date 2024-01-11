@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2.0.18
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      # Maps the directory containing Mosquitto configuration files to a location you can edit
+      - ./mosquitto:/mosquitto
